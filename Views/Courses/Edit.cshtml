@@ -1,0 +1,49 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model StudentPortal.Models.Entities.Course
+<h1>Edit Course</h1>
+@if (Model is null)
+{
+    <h1>No courses was found with this CourseId.</h1>
+}
+@if (Model is not null)
+{
+    <form method="post">
+        <div class="mt-3">
+            <label class="form-label">CourseID</label>
+            <input type="text" class="form-control" asp-for="CourseId" readonly />
+        </div>
+        <div class="mt-3">
+            <label class="form-label">CourseCode</label>
+            <input type="text" class="form-control" asp-for="CourseCode" />
+        </div>
+
+        <div class="mt-3">
+            <label class="form-label">CourseName</label>
+            <input type="text" class="form-control" asp-for="Name" />
+        </div>
+
+        <div class="mt-3">
+            <label class="form-label">Description</label>
+            <input type="text" class="form-control" asp-for="Description" />
+        </div>
+
+        <div class="mt-3">
+            <label class="form-label">Credits</label>
+            <input type="text" class="form-control" asp-for="Credits" />
+        </div>
+
+
+        <div class="mt-3">
+            <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+        <div class="mt-3">
+            <button type="submit" class="btn btn-danger" asp-action="Delete" asp-controller="Courses">Delete</button>
+        </div>
+
+    </form>
+
+}

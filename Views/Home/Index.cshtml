@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to Student Portal!</h1>
+    <button type="button" class="btn btn-primary" onclick="location.href='@Url.Page("/Account/Login", null, new { area = "Identity" })'">
+        Login
+    </button>
+</div>
+
